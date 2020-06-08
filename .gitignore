@@ -1,0 +1,8 @@
+.vscode
+__pycache__
+.idea/
+dataset_cache*
+models/
+runs/
+temp/
+result/
