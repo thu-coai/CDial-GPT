@@ -185,7 +185,7 @@ Multi-turn generated examples from an interactive environment:
 [//]: #  (Commonsense question answering examples:)
 
 ## Authors
-Yida Wang, Pei Ke, Yinhe Zheng, Kaili Huang, Minlie Huang, Xiaoyan Zhu
+Yida Wang, Pei Ke, Yinhe Zheng, Kaili Huang, Xiaoyan Zhu, Minlie Huang
 
 ## Disclaimer
 The LCCC dataset and the pre-trained models aim to facilitate research for conversation generation. The LCCC dataset provided in this repository is crawled from many sources including Weibo. This project has carried out a rigorous cleaning on it, but it is not guaranteed to completely clean out the inappropriate content, which does not represent the author's opinion.
