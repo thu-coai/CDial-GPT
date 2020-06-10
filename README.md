@@ -13,7 +13,7 @@ The code is adapted from [TransferTransfo](https://github.com/huggingface/transf
 ## <a name="#Dataset">Dataset</a>
 In this project, we present a Large-scale Cleaned Chinese Conversation corpus (LCCC) consists of 
 [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) and 
-[LCCC-large](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-large.zip). The LCCC-base is cleaner but smaller than LCCC-large. The quality of our dataset is ensured by a rigorous data cleaning pipeline, which is built based on a set of rules and learned filter trained on manually annotated dialogue pairs. The noises we consider include swearing words, sensitive words, special symbols, emoji, grammatical errors, and context-free conversations.
+[LCCC-large](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-large.zip). The LCCC-base is cleaner but smaller than LCCC-large. The quality of our dataset is ensured by a rigorous data cleaning pipeline, which is built based on a set of rules and learned filter trained on manually annotated dialogue pairs. The noises we consider include dirty words, sensitive words, special symbols, emoji, grammatical errors, and context-free conversations.
 The statistic is described below, and the vocabulary words are counted based on [Jieba](https://github.com/fxsjy/jieba) segmentation.
 
 | [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) | Single-turn | Multi-turn  |
@@ -150,7 +150,7 @@ We also employed 3 workers to evaluate 200 samples of each model about fluency, 
 
 We randomly select 1000 generated samples, and make a statistic of toxic generation:
 
-| Repetition | Swearing | Other Bad Cases |
+| Repetition | Dirty word | Other Bad Cases |
 | :----------: | :-----: | :-------: |
 | 23 | 9 | 2 |
 
