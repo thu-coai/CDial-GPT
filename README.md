@@ -42,7 +42,7 @@ The LCCC-base is constructed based on Weibo Corpus, which we crawled from [Weibo
 | Weibo Corpus                      | 79M | Q:火锅我在重庆成都吃了七八顿火锅 A: 哈哈哈哈！那我的嘴巴 可能要烂掉！ |
 | [PTT Gossiping Corpus](https://github.com/zake7749/Gossiping-Chinese-Corpus) | 0.4M | Q:为什么乡民总是欺负国高中生呢QQ A:如果以为选好科系就会变成比尔盖兹那不如退学吧 |
 | [Subtitle Corpus](https://github.com/skdjfla/dgk_lost_conv) | 2.74M | Q:京戏里头的人都是不自由的 A:他们让人拿笼子给套起来了了 |
-| [Xiaohuangji Corpus](https://github.com/skdjfla/dgk_lost_conv) | 0.45M | Q:前排，鲁迷们都起床了吧 A:标题说助攻，但是看了那球，真是活生生的讽刺了 |
+| [Xiaohuangji Corpus](https://github.com/skdjfla/dgk_lost_conv) | 0.45M | Q:你谈过恋爱么 A:谈过，哎，别提了，伤心.. |
 | [Tieba Corpus](https://github.com/codemayq/chinese_chatbot_corpus) | 2.32M | Q:前排，鲁迷们都起床了吧 A:标题说助攻，但是看了那球，真是活生生的讽刺了 |
 | [Qingyun Corpus](https://github.com/codemayq/chinese_chatbot_corpus) | 0.1M | Q:看来你很爱钱 A:噢是吗？那么你也差不多了 |
 | [Douban Conversation Corpus](https://github.com/MarkWuNLP/MultiTurnResponseSelection) | 0.5M | Q: 看 原版 英文 电影 学 纯正 英语 A: 大 爱 老友 记 反复 看 了 好多 次 了 Q: 一样 光盘 都 快 被 我 看 花 了 A: 那 你 现在 的 英语 应该 不错 了 |
