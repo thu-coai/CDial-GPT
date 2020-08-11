@@ -14,7 +14,7 @@ The code is adapted from [TransferTransfo](https://github.com/huggingface/transf
 In this project, we present a Large-scale Cleaned Chinese Conversation corpus (LCCC) consists of 
 [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) and 
 [LCCC-large](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-large.zip). The LCCC-base is cleaner but smaller than LCCC-large. The quality of our dataset is ensured by a rigorous data cleaning pipeline, which is built based on a set of rules and learned filter trained on manually annotated dialogue pairs. The noises we consider include dirty words, sensitive words, special symbols, emoji, grammatical errors, and context-free conversations.
-The statistic is described below, and the vocabulary words are counted based on [Jieba](https://github.com/fxsjy/jieba) segmentation, a splitted version (train/valid/test) of LCCC-base can be found in [here](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base_splited.zip).
+The statistic is described below, and the vocabulary words are counted based on [Jieba](https://github.com/fxsjy/jieba) segmentation. A splitted version (train/valid/test) of LCCC-base can be found in [here](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base_splited.zip).
 
 | [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) | Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :---------: | :---------: |
