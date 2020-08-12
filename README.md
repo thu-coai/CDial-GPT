@@ -199,5 +199,5 @@ Please kindly cite our [paper](https://arxiv.org/abs/2008.03946) if you use the 
       author={Yida Wang and Pei Ke and Yinhe Zheng and Kaili Huang and Yong Jiang and Xiaoyan Zhu and Minlie Huang},
       booktitle={NLPCC},
       year={2020},
-      url={http://arxiv.org/abs/1503.06733}
+      url={https://arxiv.org/abs/2008.03946}
     }
