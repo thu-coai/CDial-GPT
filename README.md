@@ -68,10 +68,10 @@ Similar to [TransferTransfo](https://arxiv.org/abs/1901.08149), we concatenate a
 
 | Models        | Parameter Size | Pre-training Dataset   | Description                                       |
 |---------------| ------ |--------------------------|-------------------------------------------------- |
-| [GPT<sub>Novel</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_Novel.zip) | 95.5M | Chinese Novel            | A GPT model pre-trained on Chinese Novel dataset (1.3B words) |
-| [GPT<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-base.zip)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [GPT2<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT2_LCCC-base.zip) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [GPT<sub>LCCC-large</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
+| [GPT<sub>Novel</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_Novel.zip) | 95.5M | Chinese Novel            | A GPT model pre-trained on Chinese Novel dataset (1.3B words).(Our code does not support this model).  |
+| [CDial-GPT<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-base.zip)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT2<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT2_LCCC-base.zip) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT<sub>LCCC-large</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
 
 ### Installation  
 Install from the source codes:
