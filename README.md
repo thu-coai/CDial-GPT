@@ -9,7 +9,7 @@
 * <a href="#Pre-training-zh">预训练模型概况</a>
 * <a href="#Evaluation-zh">评测结果</a>
 
-## NEWS
+## NEWS 09.02.2020
 - [bert4keras加载TF版本](https://github.com/bojone/CDial-GPT-tf) 包含TF版本模型，以及用bert4keras加载CDial-GPT的代码，感谢苏剑林@bojone。
 
 ## <a name="#Dataset-zh">数据集概况</a>
