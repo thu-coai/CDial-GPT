@@ -76,8 +76,8 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
 ### 安装  
 从源代码直接安装：
 
-    git clone https://github.com/lemon234071/GPT-Chinese.git
-    cd GPT-Chinese
+    git clone https://github.com/thu-coai/CDial-GPT.git
+    cd CDial-GPT
     pip install -r requirements.txt 
     
 ### 快速开始
