@@ -290,8 +290,8 @@ Similar to [TransferTransfo](https://arxiv.org/abs/1901.08149), we concatenate a
 ### Installation  
 Install from the source codes:
 
-    git clone https://github.com/lemon234071/GPT-Chinese.git
-    cd GPT-Chinese
+    git clone https://github.com/thu-coai/CDial-GPT.git
+    cd CDial-GPT
     pip install -r requirements.txt 
     
 ### Quick Start
