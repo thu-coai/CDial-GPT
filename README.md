@@ -88,11 +88,11 @@ Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC d
   
 Step 2: 训练模型
 
-    python train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json  # 使用单个GPU进行训练
+    python train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json --scheduler linear  # 使用单个GPU进行训练
 
 或者
 
-    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json  # 以分布式的方式在8块GPU上训练
+    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json --scheduler linear  # 以分布式的方式在8块GPU上训练
 
 我们的训练脚本中还提供了 ``train_path`` 参数，用户可使用该参数以切片地形式读取纯文本文件。如果您所使用的的系统中内存有限，可以考虑使用该参数读入训练数据。
 如果您使用 ``train_path`` 则需要将 ``data_path`` 置空。 
@@ -302,11 +302,11 @@ Step 1: Prepare the data for fine-tuning (E.g., [STC dataset](https://arxiv.org/
   
 Step 2: Train the model
 
-    python train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json  # Single GPU training
+    python train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json --scheduler linear  # Single GPU training
 
 or
 
-    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json  # Training on 8 GPUs
+    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint ./models/ --data_path data/STC.json --scheduler linear  # Training on 8 GPUs
 
 Note: We have also provided ``train_path`` argument in the training script to read dataset in plain text, which will be sliced and handled distributionally.
 You can consider to use this argument if the dataset is too large for your system's memory. (also, remember to leave the ``data_path`` argument empty if you are using ``train_path``). 
