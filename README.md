@@ -9,8 +9,9 @@
 * <a href="#Pre-training-zh">预训练模型概况</a>
 * <a href="#Evaluation-zh">评测结果</a>
 
-## NEWS 09.02.2020
-- [bert4keras加载TF版本](https://github.com/bojone/CDial-GPT-tf) 包含TF版本模型，以及用bert4keras加载CDial-GPT的代码，感谢苏剑林@bojone。
+## News
+- 2020-09-02: 可用[bert4keras](https://github.com/bojone/bert4keras)加载[TF版本的CDial-GPT模型](https://github.com/bojone/CDial-GPT-tf)，感谢苏剑林[@bojone](https://github.com/bojone)提供代码。
+- 2020-09-08: 感谢[@xiejiachen](https://github.com/xiejiachen)所提供的[可视化Web界面](https://github.com/thu-coai/CDial-GPT/tree/master/contrib/dash_app)。
 
 ## <a name="#Dataset-zh">数据集概况</a>
 我们所提供的数据集LCCC(Large-scale Cleaned Chinese Conversation)主要包含两部分:
