@@ -4,4 +4,4 @@
 
 This folder contains tools contributed by third parties.
 
-* Dash application (Author: [xiejiachen](https://github.com/xiejiachen)
+* Dash application: A nice web interface for the dialogue model (Author: [xiejiachen](https://github.com/xiejiachen))
