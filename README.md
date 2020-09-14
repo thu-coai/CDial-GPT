@@ -25,7 +25,7 @@
 其中，我们将仅包含两个语句的对话称为“单轮对话”，我们将包含两个以上语句的对话称为“多轮对话”。
 统计词表大小时使用 [Jieba](https://github.com/fxsjy/jieba) 分词。
 
-| [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) | 单轮对话 | 多轮对话  |
+| [LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) | 单轮对话 | 多轮对话  |
 | :----------------------------------------------------------- | :--------- | :---------  |
 | 总对话轮次                                                    |  3,354,382 |  3,466,607  |
 | 总对话语句                                                    |  6,708,554 | 13,365,268  |
@@ -34,9 +34,9 @@
 | 对话语句的评价词数                                             |    6.79    |    8.32     |
 | 每轮对话的平均语句数                                           |      2     |    3.86     |
 
-请注意， LCCC-base 数据集的清洗过程比 LCCC-large 更为严格，因此其规模也更小。我们同时提供了一个[分词后的 LCCC-base 数据集](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base_splited.zip)。
+请注意， LCCC-base 数据集的清洗过程比 LCCC-large 更为严格，因此其规模也更小。
 
-| [LCCC-large](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-large.zip) | 单轮对话 | 多轮对话  |
+| [LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/) | 单轮对话 | 多轮对话  |
 | :----------------------------------------------------------- | :---------  | :---------  |
 | 总对话轮次                                                    |  7,273,804  |  4,733,955  |
 | 总对话语句                                                    | 14,547,608  | 18,341,167  |
@@ -69,10 +69,10 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
 
 | 预训练模型        | 参数数量 | 预训练所使用数据   | 描述                                       |
 |---------------------| ------ |--------------------------|-------------------------------------------------- |
-| [GPT<sub>Novel</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_Novel.zip)                 | 95.5M | 中文小说数据| 基于中文小说数据所构建中文预训练GPT模型 （该小说数据中共包括1.3B个字）  |
-| [CDial-GPT<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-base.zip)   | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT模型   |
-| [CDial-GPT2<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT2_LCCC-base.zip) | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT2模型  |
-| [CDial-GPT<sub>LCCC-large</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip) | 95.5M | LCCC-large | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-large 训练得到的中文预训练GPT模型  |
+| [GPT<sub>Novel</sub>](https://cloud.tsinghua.edu.cn/f/5de456dcf23c4535a321/)                 | 95.5M | 中文小说数据| 基于中文小说数据所构建中文预训练GPT模型 （该小说数据中共包括1.3B个字）  |
+| [CDial-GPT<sub>LCCC-base</sub>](https://cloud.tsinghua.edu.cn/f/3c5bf48b7c2d4ab28e08/)   | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT模型   |
+| [CDial-GPT2<sub>LCCC-base</sub>](https://cloud.tsinghua.edu.cn/f/babe2be4f3f747abb887/) | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT2模型  |
+| [CDial-GPT<sub>LCCC-large</sub>](https://cloud.tsinghua.edu.cn/f/4dfb8c6c22ae47fbbe98/) | 95.5M | LCCC-large | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-large 训练得到的中文预训练GPT模型  |
 
 ### 安装  
 从源代码直接安装：
@@ -239,7 +239,7 @@ The statistic of our corpus is presented below.
 Dialogues with only two utterances are regarded as "Single-turn", and dialogues with more than three utterances are regarded as "Multi-turn".
 The vocabulary size is calculated in word-level, and [Jieba](https://github.com/fxsjy/jieba) is used to tokenize each utterance to words.
 
-| [LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base.zip) | Single-turn | Multi-turn  |
+| [LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) | Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :--------- | :---------  |
 | Sessions                                                     |  3,354,382 |  3,466,607  |
 | Utterances                                                   |  6,708,554 | 13,365,268  |
@@ -248,9 +248,9 @@ The vocabulary size is calculated in word-level, and [Jieba](https://github.com/
 | Avg. words per utterance                                     |    6.79    |    8.32     |
 | Avg. utterances per session                                  |      2     |    3.86     |
 
-Note that LCCC-base is cleaned using more strict rules compared to LCCC-large. A [tokenized version of LCCC-base](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-base_splited.zip) is also provided.
+Note that LCCC-base is cleaned using more strict rules compared to LCCC-large. 
 
-| [LCCC-large](https://coai-dataset.oss-cn-beijing.aliyuncs.com/LCCC-large.zip) | Single-turn | Multi-turn  |
+| [LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/) | Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :---------  | :---------  |
 | Sessions                                                     |  7,273,804  |  4,733,955  |
 | Utterances                                                   | 14,547,608  | 18,341,167  |
@@ -283,10 +283,10 @@ Similar to [TransferTransfo](https://arxiv.org/abs/1901.08149), we concatenate a
 
 | Models        | Parameter Size | Pre-training Dataset   | Description                                       |
 |---------------------| ------ |--------------------------|-------------------------------------------------- |
-| [GPT<sub>Novel</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_Novel.zip) | 95.5M | Chinese Novel            | A GPT model pre-trained on Chinese Novel dataset (1.3B words, note that we do not provide the detail of this model)  |
-| [CDial-GPT<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-base.zip)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [CDial-GPT2<sub>LCCC-base</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT2_LCCC-base.zip) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [CDial-GPT<sub>LCCC-large</sub>](https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
+| [GPT<sub>Novel</sub>](https://cloud.tsinghua.edu.cn/f/5de456dcf23c4535a321/) | 95.5M | Chinese Novel            | A GPT model pre-trained on Chinese Novel dataset (1.3B words, note that we do not provide the detail of this model)  |
+| [CDial-GPT<sub>LCCC-base</sub>](https://cloud.tsinghua.edu.cn/f/3c5bf48b7c2d4ab28e08/)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT2<sub>LCCC-base</sub>](https://cloud.tsinghua.edu.cn/f/babe2be4f3f747abb887/) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT<sub>LCCC-large</sub>](https://cloud.tsinghua.edu.cn/f/4dfb8c6c22ae47fbbe98/) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
 
 ### Installation  
 Install from the source codes:
