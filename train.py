@@ -9,7 +9,7 @@ from argparse import ArgumentParser
 
 import numpy as np
 import torch
-from torch.nn.parallel import DataParallel
+from torch.nn.parallel import DistributedDataParallel
 from torch.optim.lr_scheduler import LambdaLR
 
 from ignite.engine import Engine, Events
@@ -120,7 +120,7 @@ def train():
         from apex import amp  # Apex is only required if we use fp16 training
         model, optimizer = amp.initialize(model, optimizer, opt_level=args.fp16)
     if args.distributed:
-        model = DataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
+        model = DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
 
     # Training function and trainer
     def update(engine, batch):
