@@ -198,6 +198,10 @@ Step 3: 生成文本
 ## 作者
 [Yida Wang](https://github.com/lemon234071), [Pei Ke](https://github.com/kepei1106), [Yinhe Zheng](https://github.com/silverriver), [Kaili Huang](https://github.com/KellyHuang63), Yong Jiang, Xiaoyan Zhu, Minlie Huang
 
+## 致谢
+[Zuoxian Ye](https://github.com/yezuoxian), Yao Wang, Yifan Pan
+
+
 ## 免责声明
 本项目所提供的 LCCC 数据集和预训练对话模型仅限科研用途。LCCC数据集中的对话收集自不同的来源，虽然我们设计了一套严格的数据清洗流程，但是我们并不保证所有不当内容均已被过滤。该数据中所包含的所有内容和意见与本项目作者无关。
 本项目所提供的模型和代码仅为完整对话系统的一个组成部分，我们所提供的解码脚本仅限科研用途，使用本项目中的模型和脚本所生成的一切对话内容与本项目作者无关。
@@ -413,6 +417,9 @@ Multi-turn generated examples using the interactive script:
 
 ## Authors
 [Yida Wang](https://github.com/lemon234071), [Pei Ke](https://github.com/kepei1106), [Yinhe Zheng](https://github.com/silverriver), [Kaili Huang](https://github.com/KellyHuang63), Yong Jiang, Xiaoyan Zhu, Minlie Huang
+
+## Acknowledgement
+[Zuoxian Ye](https://github.com/yezuoxian), Yao Wang, Yifan Pan
 
 ## Disclaimer
 The LCCC dataset and the pre-trained models aim to facilitate the research for conversation generation. The LCCC dataset provided in this repository originates from various sources. Although a rigorous cleaning process has been carried out, there is no guarantee that all the inappropriate contents have been completely filtered out. All the contents contained in this dataset does not represent the authors' opinion.
