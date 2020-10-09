@@ -84,8 +84,8 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
 ### 快速开始
 Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC dataset](https://arxiv.org/abs/1503.02364) 或该项目目录中的toy数据 "data/toy_data.json")：
     
-    wget https://coai-dataset.oss-cn-beijing.aliyuncs.com/STC-corpus.zip # 下载 STC 数据集并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
-    wget https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip # 下载 GPT_LCCC-large 模型权重文件，并将其解压至 "model_checkpoint" 目录
+    wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # 下载 STC 数据集并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
+    wget https://cloud.tsinghua.edu.cn/f/4dfb8c6c22ae47fbbe98/?dl=1 -O GPT_LCCC-large.zip  # 下载 GPT_LCCC-large 模型权重文件，并将其解压至 "model_checkpoint" 目录
   
 Step 2: 训练模型
 
@@ -302,8 +302,8 @@ Install from the source codes:
 ### Quick Start
 Step 1: Prepare the data for fine-tuning (E.g., [STC dataset](https://arxiv.org/abs/1503.02364) or "data/toy_data.json" in our respository) and the pre-trianed model:
     
-    wget https://coai-dataset.oss-cn-beijing.aliyuncs.com/STC-corpus.zip # Download the STC dataset and unzip into "data_path" dir (fine-tuning on STC)
-    wget https://coai-dataset.oss-cn-beijing.aliyuncs.com/GPT_LCCC-large.zip # Download the GPT_LCCC-large weights file and unzip into "model_checkpoint" dir
+    wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # Download the STC dataset and unzip into "data_path" dir (fine-tuning on STC)
+    wget https://cloud.tsinghua.edu.cn/f/4dfb8c6c22ae47fbbe98/?dl=1 -O GPT_LCCC-large.zip  # Download the GPT_LCCC-large weights file and unzip into "model_checkpoint" dir
   
 Step 2: Train the model
 
