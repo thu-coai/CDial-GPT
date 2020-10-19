@@ -12,6 +12,7 @@
 ## News
 - 2020-09-02: 可用[bert4keras](https://github.com/bojone/bert4keras)加载[TF版本的CDial-GPT模型](https://github.com/bojone/CDial-GPT-tf)，感谢苏剑林[@bojone](https://github.com/bojone)提供代码。
 - 2020-09-08: 感谢[@xiejiachen](https://github.com/xiejiachen)所提供的[可视化Web界面](https://github.com/thu-coai/CDial-GPT/tree/master/contrib/dash_app)。
+- 2020-10-18: 我们的论文《A Large-Scale Chinese Short-Text Conversation Dataset》获得了NLPCC2020 Best Student Paper Award。 🎉 🎉 🎉 
 
 ## <a name="#Dataset-zh">数据集概况</a>
 我们所提供的数据集LCCC(Large-scale Cleaned Chinese Conversation)主要包含两部分:
