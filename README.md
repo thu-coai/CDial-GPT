@@ -101,8 +101,9 @@ Step 2: 训练模型
 
 Step 3: 生成文本
 
-    python infer.py --model_checkpoint ./models/ --datapath data/STC_test.json --out_path STC_result.txt  # 在测试数据上生成回复
-    python interact.py --model_checkpoint ./models/  # 在命令行中与模型进行交互
+    # YOUR_MODEL_PATH: 你要使用的模型的路径，每次微调后的模型目录保存在./runs/中
+    python infer.py --model_checkpoint YOUR_MODEL_PATH --datapath data/STC_test.json --out_path STC_result.txt  # 在测试数据上生成回复
+    python interact.py --model_checkpoint YOUR_MODEL_PATH  # 在命令行中与模型进行交互
 
 训练脚本参数
 
@@ -319,8 +320,9 @@ You can consider to use this argument if the dataset is too large for your syste
 
 Step 3: Inference mode
 
-    python infer.py --model_checkpoint ./models/ --datapath data/STC_test.json --out_path STC_result.txt  # Do Inference on a corpus
-    python interact.py --model_checkpoint ./models/  # Interact on the terminal
+    # YOUR_MODEL_PATH: the model path used for generation
+    python infer.py --model_checkpoint YOUR_MODEL_PATH --datapath data/STC_test.json --out_path STC_result.txt  # Do Inference on a corpus
+    python interact.py --model_checkpoint YOUR_MODEL_PATH  # Interact on the terminal
 
 Training Arguments
 
