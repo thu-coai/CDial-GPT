@@ -71,9 +71,9 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
 | 预训练模型        | 参数数量 | 预训练所使用数据   | 描述                                       |
 |---------------------| ------ |--------------------------|-------------------------------------------------- |
 | GPT<sub>Novel</sub>                 | 95.5M | 中文小说数据| 基于中文小说数据所构建中文预训练GPT模型 （该小说数据中共包括1.3B个字）  |
-| [CDial-GPT<sub>LCCC-base</sub>](https://huggingface.co/lemon234071/CDial-GPT_LCCC-base)   | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT模型   |
-| [CDial-GPT2<sub>LCCC-base</sub>](https://huggingface.co/lemon234071/CDial-GPT2_LCCC-base) | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT2模型  |
-| [CDial-GPT<sub>LCCC-large</sub>](https://huggingface.co/lemon234071/CDial-GPT_LCCC-large) | 95.5M | LCCC-large | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-large 训练得到的中文预训练GPT模型  |
+| [CDial-GPT<sub>LCCC-base</sub>](https://huggingface.co/thu-coai/CDial-GPT_LCCC-base)   | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT模型   |
+| [CDial-GPT2<sub>LCCC-base</sub>](https://huggingface.co/thu-coai/CDial-GPT2_LCCC-base) | 95.5M | LCCC-base  | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-base 训练得到的中文预训练GPT2模型  |
+| [CDial-GPT<sub>LCCC-large</sub>](https://huggingface.co/thu-coai/CDial-GPT_LCCC-large) | 95.5M | LCCC-large | 在GPT<sub>Novel</sub>的基础上，使用 LCCC-large 训练得到的中文预训练GPT模型  |
 
 ### 安装  
 从源代码直接安装：
@@ -87,15 +87,15 @@ Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC d
     
     wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # 下载 STC 数据集并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
     git lfs install
-    git clone https://huggingface.co/lemon234071/CDial-GPT_LCCC-large  # 您可自行下载模型或者OpenAIGPTLMHeadModel.from_pretrained("lemon234071/CDial-GPT_LCCC-large")
+    git clone https://huggingface.co/thu-coai/CDial-GPT_LCCC-large  # 您可自行下载模型或者OpenAIGPTLMHeadModel.from_pretrained("thu-coai/CDial-GPT_LCCC-large")
   
 Step 2: 训练模型
 
-    python train.py --pretrained --model_checkpoint lemon234071/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # 使用单个GPU进行训练
+    python train.py --pretrained --model_checkpoint thu-coai/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # 使用单个GPU进行训练
 
 或者
 
-    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint lemon234071/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # 以分布式的方式在8块GPU上训练
+    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint thu-coai/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # 以分布式的方式在8块GPU上训练
 
 我们的训练脚本中还提供了 ``train_path`` 参数，用户可使用该参数以切片地形式读取纯文本文件。如果您所使用的的系统中内存有限，可以考虑使用该参数读入训练数据。
 如果您使用 ``train_path`` 则需要将 ``data_path`` 置空。 
@@ -291,9 +291,9 @@ Similar to [TransferTransfo](https://arxiv.org/abs/1901.08149), we concatenate a
 | Models        | Parameter Size | Pre-training Dataset   | Description                                       |
 |---------------------| ------ |--------------------------|-------------------------------------------------- |
 | GPT<sub>Novel</sub> | 95.5M | Chinese Novel            | A GPT model pre-trained on Chinese Novel dataset (1.3B words, note that we do not provide the detail of this model)  |
-| [CDial-GPT<sub>LCCC-base</sub>](https://huggingface.co/lemon234071/CDial-GPT_LCCC-base)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [CDial-GPT2<sub>LCCC-base</sub>](https://huggingface.co/lemon234071/CDial-GPT2_LCCC-base) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
-| [CDial-GPT<sub>LCCC-large</sub>](https://huggingface.co/lemon234071/CDial-GPT_LCCC-large) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT<sub>LCCC-base</sub>](https://huggingface.co/thu-coai/CDial-GPT_LCCC-base)  | 95.5M | [LCCC-base](##datasets)  | A GPT model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT2<sub>LCCC-base</sub>](https://huggingface.co/thu-coai/CDial-GPT2_LCCC-base) | 95.5M | [LCCC-base](##datasets)  | A GPT2 model post-trained on LCCC-base dataset from GPT<sub>Novel</sub> |
+| [CDial-GPT<sub>LCCC-large</sub>](https://huggingface.co/thu-coai/CDial-GPT_LCCC-large) | 95.5M | [LCCC-large](##datasets) | A GPT model post-trained on LCCC-large dataset from GPT<sub>Novel</sub> |
 
 ### Installation  
 Install from the source codes:
@@ -307,15 +307,15 @@ Step 1: Prepare the data for fine-tuning (E.g., [STC dataset](https://arxiv.org/
     
     wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # Download the STC dataset and unzip into "data_path" dir (fine-tuning on STC)
     git lfs install
-    git clone https://huggingface.co/lemon234071/CDial-GPT_LCCC-large  # or OpenAIGPTLMHeadModel.from_pretrained("lemon234071/CDial-GPT_LCCC-large")
+    git clone https://huggingface.co/thu-coai/CDial-GPT_LCCC-large  # or OpenAIGPTLMHeadModel.from_pretrained("thu-coai/CDial-GPT_LCCC-large")
   
 Step 2: Train the model
 
-    python train.py --pretrained --model_checkpoint lemon234071/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # Single GPU training
+    python train.py --pretrained --model_checkpoint thu-coai/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # Single GPU training
 
 or
 
-    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint lemon234071/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # Training on 8 GPUs
+    python -m torch.distributed.launch --nproc_per_node=8 train.py --pretrained --model_checkpoint thu-coai/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # Training on 8 GPUs
 
 Note: We have also provided ``train_path`` argument in the training script to read dataset in plain text, which will be sliced and handled distributionally.
 You can consider to use this argument if the dataset is too large for your system's memory. (also, remember to leave the ``data_path`` argument empty if you are using ``train_path``). 
