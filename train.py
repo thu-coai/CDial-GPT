@@ -101,10 +101,10 @@ def train():
     config_class = OpenAIGPTConfig if not args.gpt2 else GPT2Config
     tokenizer_class = BertTokenizer
     if args.pretrained:
-        tokenizer = tokenizer_class.from_pretrained(args.model_checkpoint, do_lower_case=True, do_basic_tokenize=False)
+        tokenizer = tokenizer_class.from_pretrained(args.model_checkpoint, do_lower_case=True, never_split=["[speaker1]", "[speaker2]"])
         model = model_class.from_pretrained(args.model_checkpoint)
     else:
-        tokenizer = tokenizer_class(os.path.join(args.model_checkpoint, "vocab.txt"), do_lower_case=True, do_basic_tokenize=False)
+        tokenizer = tokenizer_class(os.path.join(args.model_checkpoint, "vocab.txt"), do_lower_case=True, never_split=["[speaker1]", "[speaker2]"])
         config = config_class.from_json_file(os.path.join(args.model_checkpoint, CONFIG_NAME))
         model = model_class(config)
     model.to(args.device)
