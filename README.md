@@ -83,7 +83,7 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
     pip install -r requirements.txt 
     
 ### 快速开始
-Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC dataset](https://arxiv.org/abs/1503.02364) 或该项目目录中的toy数据 "data/toy_data.json")：
+Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC dataset](https://arxiv.org/abs/1503.02364) 或该项目目录中的toy数据 "data/toy_data.json", 请注意如数据中包含英文需按字母分割如：h e l l o)
     
     wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # 下载 STC 数据集并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
     git lfs install
