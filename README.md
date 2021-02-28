@@ -10,6 +10,7 @@
 * <a href="#Evaluation-zh">评测结果</a>
 
 ## News
+- 2021-02-28: 一个[对话数据清洗框架](https://github.com/lemon234071/clean-dialog)，欢迎大家提bug和加速优化算法，以及新的清洗功能等等。
 - 2021-01-09: 实验室出版新书[《现代自然语言生成》](https://github.com/thu-coai/NLG_book)，欢迎大家阅读购买。
 - 2020-11-20: 预训练模型新工作[SentiLARE](http://coai.cs.tsinghua.edu.cn/tools/4)。本工作将词级别的语言学知识（包括词性和词的情感极性）引入预训练语言模型中，提出了一种适用于情感分析任务的语言表示模型SentiLARE，欢迎大家使用。
 - 2020-10-18: 我们的论文《A Large-Scale Chinese Short-Text Conversation Dataset》获得了NLPCC2020 Best Student Paper Award。 🎉 🎉 🎉 
