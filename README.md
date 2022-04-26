@@ -10,6 +10,7 @@
 * <a href="#Evaluation-zh">评测结果</a>
 
 ## News
+- 2022-04-26: 一个新的多模态对话数据集[MMChat](https://github.com/silverriver/MMChat)，欢迎大家使用。
 - 2021-02-28: 一个[对话数据清洗框架](https://github.com/lemon234071/clean-dialog)，欢迎大家提bug和加速优化算法，以及新的清洗功能等等。
 - 2021-01-09: 实验室出版新书[《现代自然语言生成》](https://github.com/thu-coai/NLG_book)，欢迎大家阅读购买。
 - 2020-11-20: 预训练模型新工作[SentiLARE](http://coai.cs.tsinghua.edu.cn/tools/4)。本工作将词级别的语言学知识（包括词性和词的情感极性）引入预训练语言模型中，提出了一种适用于情感分析任务的语言表示模型SentiLARE，欢迎大家使用。
@@ -19,8 +20,8 @@
 
 ## <a name="#Dataset-zh">数据集概况</a>
 我们所提供的数据集LCCC(Large-scale Cleaned Chinese Conversation)主要包含两部分:
-[LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) 和
-[LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/).
+`LCCC-base` ([百度网盘](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) 和
+`LCCC-large` ([百度网盘](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)).
 我们设计了一套严格的数据过滤流程来确保该数据集中对话数据的质量。
 这一数据过滤流程中包括一系列手工规则以及若干基于机器学习算法所构建的分类器。
 我们所过滤掉的噪声包括：脏字脏词、特殊字符、颜表情、语法不通的语句、上下文不相关的对话等。
@@ -29,18 +30,18 @@
 其中，我们将仅包含两个语句的对话称为“单轮对话”，我们将包含两个以上语句的对话称为“多轮对话”。
 统计词表大小时使用 [Jieba](https://github.com/fxsjy/jieba) 分词。
 
-| [LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) | 单轮对话 | 多轮对话  |
+| LCCC-base <br> ([百度网盘](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) | 单轮对话 | 多轮对话  |
 | :----------------------------------------------------------- | :--------- | :---------  |
-| 总对话轮次                                                    |  3,354,382 |  3,466,607  |
+| 总对话轮次                                                    |  3,354,277 |  3,466,278  |
 | 总对话语句                                                    |  6,708,554 | 13,365,268  |
 | 总字符数                                                      | 68,559,727 | 163,690,614 |
 | 词表大小                                                      |   372,063  |   666,931   |
-| 对话语句的评价词数                                             |    6.79    |    8.32     |
+| 对话语句的平均词数                                             |    6.79    |    8.32     |
 | 每轮对话的平均语句数                                           |      2     |    3.86     |
 
 请注意， LCCC-base 数据集的清洗过程比 LCCC-large 更为严格，因此其规模也更小。
 
-| [LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/) | 单轮对话 | 多轮对话  |
+| LCCC-large <br> ([百度网盘](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)) | 单轮对话 | 多轮对话  |
 | :----------------------------------------------------------- | :---------  | :---------  |
 | 总对话轮次                                                    |  7,273,804  |  4,733,955  |
 | 总对话语句                                                    | 14,547,608  | 18,341,167  |
@@ -88,10 +89,12 @@ LCCC-base 数据集中的原始对话数据来自于微博对话，LCCC-large �
 ### 快速开始
 Step 1: 准备预训练模型和 fine-tuning 所需使用的数据集(如 [STC dataset](https://arxiv.org/abs/1503.02364) 或该项目目录中的toy数据 "data/toy_data.json", 请注意如数据中包含英文需按字母分割如：h e l l o)
     
-    wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # 下载 STC 数据集并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
+    # 下载 STC 数据集 中的训练集和验证集 并将其解压至 "data_path" 目录 (如果微调所使用的数据集为 STC)
     git lfs install
     git clone https://huggingface.co/thu-coai/CDial-GPT_LCCC-large  # 您可自行下载模型或者OpenAIGPTLMHeadModel.from_pretrained("thu-coai/CDial-GPT_LCCC-large")
-  
+
+ps：可以使用如下链接下载STC的训练集和验证集 ([百度网盘](https://pan.baidu.com/s/1GKwGDV-0e6dcRR-hVrrKGw?pwd=rev5), [Google Drive](https://drive.google.com/file/d/1jsTyvOz0y_6UIAkaibvvxf6bw0REqAlO/view?usp=sharing))
+
 Step 2: 训练模型
 
     python train.py --pretrained --model_checkpoint thu-coai/CDial-GPT_LCCC-large --data_path data/STC.json --scheduler linear  # 使用单个GPU进行训练
@@ -108,6 +111,8 @@ Step 3: 生成文本
     # YOUR_MODEL_PATH: 你要使用的模型的路径，每次微调后的模型目录保存在./runs/中
     python infer.py --model_checkpoint YOUR_MODEL_PATH --datapath data/STC_test.json --out_path STC_result.txt  # 在测试数据上生成回复
     python interact.py --model_checkpoint YOUR_MODEL_PATH  # 在命令行中与模型进行交互
+
+ps：可以使用如下链接下载STC的测试集 ([百度网盘](https://pan.baidu.com/s/1BrsgWE_btmehQSY2a6wqBA?pwd=fyaf), [Google Drive](https://drive.google.com/file/d/15jEriASrMX4r1zShY-pvDPLt-gOF4Wbg/view?usp=sharing))
 
 训练脚本参数
 
@@ -138,7 +143,9 @@ Step 3: 生成文本
 
 ## <a name="#Evaluation-en">评测结果</a> 
 我们评测了使用
-[STC dataset](https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/)
+STC数据集 
+(训练集/验证集 ([百度网盘](https://pan.baidu.com/s/1GKwGDV-0e6dcRR-hVrrKGw?pwd=rev5), [Google Drive](https://drive.google.com/file/d/1jsTyvOz0y_6UIAkaibvvxf6bw0REqAlO/view?usp=sharing)),
+测试集 ([百度网盘](https://pan.baidu.com/s/1BrsgWE_btmehQSY2a6wqBA?pwd=fyaf), [Google Drive](https://drive.google.com/file/d/15jEriASrMX4r1zShY-pvDPLt-gOF4Wbg/view?usp=sharing)))
 微调后的对话预训练模型。
 所有的回复均使用 [Nucleus Sampling](https://arxiv.org/abs/1904.09751) 的方法采样得到 (p=0.9, temperature=0.7)。
 
@@ -239,8 +246,8 @@ Step 3: 生成文本
 
 ## <a name="#Dataset-en">Dataset</a>
 We present a Large-scale Cleaned Chinese Conversation corpus (LCCC) containing:
-[LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) and
-[LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/).
+`LCCC-base` ([Baidu Netdisk](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) and
+`LCCC-large` ([Baidu Netdisk](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)).
 A rigorous data cleaning pipeline is designed to ensure the quality of the corpus.
 This pipeline involves a set of rules and several classifier-based filters.
 Noises such as offensive or sensitive words, special symbols, emojis, grammatically incorrect sentences, and incoherent conversations are filtered.
@@ -249,7 +256,7 @@ The statistic of our corpus is presented below.
 Dialogues with only two utterances are regarded as "Single-turn", and dialogues with more than three utterances are regarded as "Multi-turn".
 The vocabulary size is calculated in word-level, and [Jieba](https://github.com/fxsjy/jieba) is used to tokenize each utterance to words.
 
-| [LCCC-base](https://cloud.tsinghua.edu.cn/f/f131a4d259184566a29c/) | Single-turn | Multi-turn  |
+| LCCC-base <br> ([Baidu Netdisk](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing))| Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :--------- | :---------  |
 | Sessions                                                     |  3,354,382 |  3,466,607  |
 | Utterances                                                   |  6,708,554 | 13,365,268  |
@@ -260,7 +267,7 @@ The vocabulary size is calculated in word-level, and [Jieba](https://github.com/
 
 Note that LCCC-base is cleaned using more strict rules compared to LCCC-large. 
 
-| [LCCC-large](https://cloud.tsinghua.edu.cn/f/8424e7b9454c4e628c24/) | Single-turn | Multi-turn  |
+| LCCC-large <br> ([Baidu Netdisk](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)) | Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :---------  | :---------  |
 | Sessions                                                     |  7,273,804  |  4,733,955  |
 | Utterances                                                   | 14,547,608  | 18,341,167  |
@@ -308,9 +315,11 @@ Install from the source codes:
 ### Quick Start
 Step 1: Prepare the data for fine-tuning (E.g., [STC dataset](https://arxiv.org/abs/1503.02364) or "data/toy_data.json" in our respository) and the pre-trianed model:
     
-    wget https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/?dl=1 -O STC-corpus.zip  # Download the STC dataset and unzip into "data_path" dir (fine-tuning on STC)
+    # Download the STC dataset and unzip into "data_path" dir (fine-tuning on STC)
     git lfs install
     git clone https://huggingface.co/thu-coai/CDial-GPT_LCCC-large  # or OpenAIGPTLMHeadModel.from_pretrained("thu-coai/CDial-GPT_LCCC-large")
+
+ps: You can download the train and valid split of STC from the following links: ([Baidu Netdisk](https://pan.baidu.com/s/1GKwGDV-0e6dcRR-hVrrKGw?pwd=rev5), [Google Drive](https://drive.google.com/file/d/1jsTyvOz0y_6UIAkaibvvxf6bw0REqAlO/view?usp=sharing))
   
 Step 2: Train the model
 
@@ -328,6 +337,8 @@ Step 3: Inference mode
     # YOUR_MODEL_PATH: the model path used for generation
     python infer.py --model_checkpoint YOUR_MODEL_PATH --datapath data/STC_test.json --out_path STC_result.txt  # Do Inference on a corpus
     python interact.py --model_checkpoint YOUR_MODEL_PATH  # Interact on the terminal
+
+ps: You can download the test split of STC from the following links: ([Baidu Netdisk](https://pan.baidu.com/s/1BrsgWE_btmehQSY2a6wqBA?pwd=fyaf), [Google Drive](https://drive.google.com/file/d/15jEriASrMX4r1zShY-pvDPLt-gOF4Wbg/view?usp=sharing))
 
 Training Arguments
 
@@ -358,7 +369,10 @@ Training Arguments
 
 ## <a name="#Evaluation-en">Evaluation</a> 
 Evaluation is performed on results generated by models fine-tuned on
-[STC dataset](https://cloud.tsinghua.edu.cn/f/372be4a9994b4124810e/).
+
+STC dataset 
+(Train/Valid split ([Baidu Netdisk](https://pan.baidu.com/s/1GKwGDV-0e6dcRR-hVrrKGw?pwd=rev5), [Google Drive](https://drive.google.com/file/d/1jsTyvOz0y_6UIAkaibvvxf6bw0REqAlO/view?usp=sharing)),
+Test split ([Baidu Netdisk](https://pan.baidu.com/s/1BrsgWE_btmehQSY2a6wqBA?pwd=fyaf), [Google Drive](https://drive.google.com/file/d/15jEriASrMX4r1zShY-pvDPLt-gOF4Wbg/view?usp=sharing))).
 All responses are generated using the [Nucleus Sampling](https://arxiv.org/abs/1904.09751) scheme with a threshold 0.9 and temperature 0.7.
 
 #### Automatic Evaluation
