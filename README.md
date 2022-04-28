@@ -20,7 +20,7 @@
 
 ## <a name="#Dataset-zh">数据集概况</a>
 我们所提供的数据集LCCC(Large-scale Cleaned Chinese Conversation)主要包含两部分:
-`LCCC-base` ([百度网盘](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) 和
+`LCCC-base` ([百度网盘](https://pan.baidu.com/s/1gKnFukU6OJl-wSdukK-wUw?pwd=9p23), [Google Drive](https://drive.google.com/file/d/1oobhYW_S_vPPzP5bLAUTIm7TaRzryxgW/view?usp=sharing)) 和
 `LCCC-large` ([百度网盘](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)).
 我们设计了一套严格的数据过滤流程来确保该数据集中对话数据的质量。
 这一数据过滤流程中包括一系列手工规则以及若干基于机器学习算法所构建的分类器。
@@ -30,11 +30,11 @@
 其中，我们将仅包含两个语句的对话称为“单轮对话”，我们将包含两个以上语句的对话称为“多轮对话”。
 统计词表大小时使用 [Jieba](https://github.com/fxsjy/jieba) 分词。
 
-| LCCC-base <br> ([百度网盘](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) | 单轮对话 | 多轮对话  |
+| LCCC-base <br> ([百度网盘](https://pan.baidu.com/s/1gKnFukU6OJl-wSdukK-wUw?pwd=9p23), [Google Drive](https://drive.google.com/file/d/1oobhYW_S_vPPzP5bLAUTIm7TaRzryxgW/view?usp=sharing)) | 单轮对话 | 多轮对话  |
 | :----------------------------------------------------------- | :--------- | :---------  |
-| 总对话轮次                                                    |  3,354,277 |  3,466,278  |
-| 总对话语句                                                    |  6,708,554 | 13,365,268  |
-| 总字符数                                                      | 68,559,727 | 163,690,614 |
+| 总对话轮次                                                    |  3,354,232 |  3,466,274  |
+| 总对话语句                                                    |  6,708,464 | 13,365,256  |
+| 总字符数                                                      | 68,559,367 | 163,690,569 |
 | 词表大小                                                      |   372,063  |   666,931   |
 | 对话语句的平均词数                                             |    6.79    |    8.32     |
 | 每轮对话的平均语句数                                           |      2     |    3.86     |
@@ -246,7 +246,7 @@ STC数据集
 
 ## <a name="#Dataset-en">Dataset</a>
 We present a Large-scale Cleaned Chinese Conversation corpus (LCCC) containing:
-`LCCC-base` ([Baidu Netdisk](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing)) and
+`LCCC-base` ([Baidu Netdisk](https://pan.baidu.com/s/1gKnFukU6OJl-wSdukK-wUw?pwd=9p23), [Google Drive](https://drive.google.com/file/d/1oobhYW_S_vPPzP5bLAUTIm7TaRzryxgW/view?usp=sharing)) and
 `LCCC-large` ([Baidu Netdisk](https://pan.baidu.com/s/1Y_cFEWXrNapBRCV0OOlBGg?pwd=zdmn), [Google Drive](https://drive.google.com/file/d/1hhxXqEqmXegf8Ca0MVQyVshlEi7hsjPi/view?usp=sharing)).
 A rigorous data cleaning pipeline is designed to ensure the quality of the corpus.
 This pipeline involves a set of rules and several classifier-based filters.
@@ -256,7 +256,7 @@ The statistic of our corpus is presented below.
 Dialogues with only two utterances are regarded as "Single-turn", and dialogues with more than three utterances are regarded as "Multi-turn".
 The vocabulary size is calculated in word-level, and [Jieba](https://github.com/fxsjy/jieba) is used to tokenize each utterance to words.
 
-| LCCC-base <br> ([Baidu Netdisk](https://pan.baidu.com/s/1kkUDuUaUgVlZEEcemA2ilw?pwd=5bm2), [Google Drive](https://drive.google.com/file/d/1jZa17rZ4deHFO2VgqhB4D-cJ4MCrs1_0/view?usp=sharing))| Single-turn | Multi-turn  |
+| LCCC-base <br> ([Baidu Netdisk](https://pan.baidu.com/s/1gKnFukU6OJl-wSdukK-wUw?pwd=9p23), [Google Drive](https://drive.google.com/file/d/1oobhYW_S_vPPzP5bLAUTIm7TaRzryxgW/view?usp=sharing))| Single-turn | Multi-turn  |
 | :----------------------------------------------------------- | :--------- | :---------  |
 | Sessions                                                     |  3,354,382 |  3,466,607  |
 | Utterances                                                   |  6,708,554 | 13,365,268  |
