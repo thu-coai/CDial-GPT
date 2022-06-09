@@ -10,6 +10,14 @@
 * <a href="#Evaluation-zh">评测结果</a>
 
 ## News
+- 2022-06-09: LCCC数据集现在可以通过huggingface的[datasets](https://github.com/huggingface/datasets)库加载：
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("lccc", "base")  # or "large"
+```
+
 - 2022-04-26: 一个新的多模态对话数据集[MMChat](https://github.com/silverriver/MMChat)，欢迎大家使用。
 - 2021-02-28: 一个[对话数据清洗框架](https://github.com/lemon234071/clean-dialog)，欢迎大家提bug和加速优化算法，以及新的清洗功能等等。
 - 2021-01-09: 实验室出版新书[《现代自然语言生成》](https://github.com/thu-coai/NLG_book)，欢迎大家阅读购买。
